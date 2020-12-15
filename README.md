@@ -2,6 +2,8 @@
 
 This is a dummy repository to practice making a Pull Request (PR).
 
+I want to link to <a href="#anchor" style="text-decoration: none">anchor</a> paragraph.
+
 ## Table of Contents
 
 The following sections explain the tasks that you need to perform to create a PR:
@@ -155,3 +157,5 @@ To merge the master branch into another branch:
 
 
 [⇧ back to top](#table-of-contents)
+
+<a name="anchor" style="text-decoration: none">This is the anchor paragraph.</a>
