@@ -23,8 +23,10 @@ To create a local copy of a remote repository:
     You have a copy of the repository on your GitHub account.
 
 1. Go to your copy of the repository in GitHub (forked repository).
-1. Click the ![clone](images/clone-or-download.png) button.
+1. Click the ![clone](images/clone-or-download.png) button. 
 1. Click the ![copy-url](images/copy-url.png) button to copy the repository’s URL address.
+
+   >**Note**: If you enabled the SSH Keys, click **Use SSH** prior to copy the repository's URL address. 
 1. Open your terminal application.
 1. Change the current working directory to the location where you want to store the repository’s contents using the change directory (**cd**) command.
 1. Enter `git clone`, and then paste the URL you copied in Step 5. 
@@ -48,11 +50,18 @@ To create a new branch and commit changes to it:
    
    > **Suggestion:** Create a meaningful name for your branch so that you can easily remember what you modified or added to the repository.
 
+   Once you have the new branch, you can change, create, or modify files in the repository. 
+
 1. Stage your changes:
 
    ```
     git add .
    ```
+   or 
+   ```
+   git add name-of-file.md
+   ```
+   >**Note**: The best practice is to use the name of the file you modified.
 
 1. Commit your changes:
 
@@ -76,7 +85,7 @@ To create a a Pull Request in the forked GitHub repository:
     git status
    ```
 
-   >**Note:** You can the current branch to a different one by running the command `git branch name-of-you-branch`.
+   >**Note:** You can move from the current branch to a different one by running the command `git branch name-of-you-branch`.
 
 1. Push your changes (commited in the branch you created) to the master branch of the original GitHub repository:
 
@@ -112,12 +121,16 @@ To update your local copy of the GitHub repository:
     git checkout master
    ```
 
-1. Add the original repository's GitHub adress to your tracked repositories.
+1. Add the original repository's GitHub address to your tracked repositories.
 
    ```
     git remote add upstream https://github.com/original-owner-username/original-repository.git
    ```
-   >Note: To view your list of tracked repositories, run the command `git remote -v`.
+
+   >**Note**: Remember to use the SSH URL if you are using SSH Keys. 
+
+   >**Note**: To view your list of tracked repositories, run the command `git remote -v`.
+
 
 1. Obtain the latest version of the original repository's master branch:
 
@@ -154,7 +167,6 @@ To merge the master branch into another branch:
    ```
      git merge master
     ```
-
 
 [⇧ back to top](#table-of-contents)
 
